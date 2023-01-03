@@ -1,5 +1,6 @@
-import "core-js/actual/array/includes";
+import { boxData } from "./box";
 
-if (["hello", "world"].includes("hello")) {
-  print("hellooo");
-}
+const overlay = mp.create_osd_overlay("ass-events");
+
+overlay.data = boxData;
+overlay.update();

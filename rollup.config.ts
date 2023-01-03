@@ -4,12 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 
-const plugins = [
-  typescript({ compilerOptions: { lib: ["es2016.array.include"] } }),
-  commonjs(),
-  resolve(),
-  terser(),
-];
+const plugins = [typescript(), commonjs(), resolve(), terser()];
 
 export default defineConfig({
   input: "src/main.ts",
