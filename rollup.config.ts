@@ -6,11 +6,29 @@ import terser from "@rollup/plugin-terser";
 
 const plugins = [typescript(), commonjs(), resolve(), terser()];
 
-export default defineConfig({
-  input: "src/main.ts",
-  output: {
-    file: "dist/main.js",
-    format: "cjs",
+export default defineConfig([
+  {
+    input: "src/main.ts",
+    output: {
+      file: "dist/main.js",
+      format: "cjs",
+    },
+    plugins,
   },
-  plugins,
-});
+  {
+    input: "src/user-data-serv.ts",
+    output: {
+      file: "dist/user-data-serv.js",
+      format: "cjs",
+    },
+    plugins,
+  },
+  {
+    input: "src/user-data-client.ts",
+    output: {
+      file: "dist/user-data-client.js",
+      format: "cjs",
+    },
+    plugins,
+  },
+]);
