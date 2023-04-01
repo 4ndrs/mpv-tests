@@ -1,4 +1,5 @@
 import { defineConfig } from "rollup";
+
 import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
@@ -27,6 +28,14 @@ export default defineConfig([
     input: "src/user-data-client.ts",
     output: {
       file: "dist/user-data-client.js",
+      format: "cjs",
+    },
+    plugins,
+  },
+  {
+    input: "src/eventEmitter.ts",
+    output: {
+      file: "dist/eventEmitter.js",
       format: "cjs",
     },
     plugins,
