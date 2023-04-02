@@ -40,4 +40,12 @@ export default defineConfig([
     },
     plugins,
   },
+  {
+    input: "src/purempv-shared.ts",
+    output: {
+      file: "dist/purempv-shared.js",
+      format: "cjs",
+    },
+    plugins,
+  },
 ]);
